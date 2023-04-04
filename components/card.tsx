@@ -1,9 +1,9 @@
 import Paragraph from "./paragraph";
-import Heading from "./Heading";
+import Heading from "./heading";
 import Icon from "./icon";
 import Button from "./button";
 
-export interface CardProps {
+interface CardProps {
   color: string;
   icon: string;
   title: string;
@@ -18,11 +18,11 @@ export default function Card({ color, icon, title, copy }: CardProps) {
         p-12 
         w-[327px] h-[442px]
         flex flex-col justify-between  
-        [&:first-child]:rounded-tl-lg [&:first-child]:rounded-tr-lg
-        [&:last-child]:rounded-bl-lg [&:last-child]:rounded-br-lg
+        first:rounded-tl-lg first:rounded-tr-lg
+        last:rounded-bl-lg last:rounded-br-lg
         md:w-[307px] md:h-[500px]
-        md:[&:first-child]:rounded-tr-none md:[&:first-child]:rounded-bl-lg
-        md:[&:last-child]:rounded-tr-lg md:[&:last-child]:rounded-bl-none
+        md:first:rounded-tr-none md:first:rounded-bl-lg
+        md:last:rounded-tr-lg md:last:rounded-bl-none
       `}
     >
       <div>

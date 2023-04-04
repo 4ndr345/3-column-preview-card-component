@@ -1,4 +1,4 @@
-import Card, { CardProps } from "../components/card";
+import Card from "../components/card";
 
 const content = [
   {
@@ -24,8 +24,8 @@ const content = [
 export default function Home() {
   return (
     <div className="flex flex-col items-center md:flex-row md:justify-center mt-[88px] md:mt-[171px]">
-      {content.map((val: CardProps) => (
-        <Card {...val} />
+      {content.map((value, index) => (
+        <Card key={index} {...value} />
       ))}
     </div>
   );
